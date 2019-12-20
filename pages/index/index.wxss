@@ -1,0 +1,13 @@
+.search-bar {
+    margin-top: 20rpx;
+}
+
+.notice-bar {
+    margin-top: 20rpx;
+    background-color: #1C95FD;
+}
+
+.loading {
+    margin-top: 40rpx;
+    margin-bottom: 20rpx;
+}

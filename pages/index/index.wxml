@@ -1,0 +1,11 @@
+<view class="container">
+    <l-search-bar placeholder="搜索" l-class="search-bar" bg-color="white" shape="circle" show-cancel="{{false}}" />
+    <m-swiper data="{{banners}}"></m-swiper>
+    <l-notice-bar show="{{true}}" speed="1000" front-icon-name="notification" l-class="notice-bar" type="swip" swip-arr="{{whispers}}"></l-notice-bar>
+    <view class="art-container">
+        <block wx:for="{{articles}}" wx:key="">
+            <m-article bind:artDetail="artDetail" data="{{item}}"></m-article>
+        </block>
+    </view>
+    <l-loading show="{{loading}}" l-class="loading" type="change"></l-loading>
+</view>

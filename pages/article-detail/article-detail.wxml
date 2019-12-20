@@ -1,0 +1,46 @@
+<view class="container">
+    <text class="title">{{artDetail.article_title}}</text>
+    <view class="articlemsg">
+        <l-tag shape="circle">{{artDetail.article_type}}</l-tag>
+        <p class="articletype"></p>
+        <p>
+            <i class='fa fa-user'></i>
+            刘小莫
+        </p>
+        <p class="articletime">
+            <i class="fa fa-clock-o"></i>
+            {{artDetail.create_time}}
+        </p>
+    </view>
+    <view class="artmsg">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+    <view class="useroperdiv">
+        <p style="margin-right:12px;">阅读 {{artDetail.read_num}}</p>
+        <p data-opertype="0" data-artid="{{artDetail.id}}" bindtap="artlike">
+            <i style="color:#758fc1" class="fa {{artDetail.is_like==1?'fa-thumbs-up':'fa-thumbs-o-up'}}"></i>
+            {{artDetail.like_num}}
+        </p>
+        <p data-opertype="1" data-artid="{{artDetail.id}}" bindtap="artlike" style="float:right">
+            <i style="color:#758fc1" class="fa {{artDetail.is_collect==1?'fa-star':'fa-star-o'}}"></i>
+            收藏
+        </p>
+    </view>
+</view>
+<view class="artpingluns">
+    <view class="pltxtmsg">精选留言({{artDetail.comment_num}})</view>
+    <view class="writepldiv" bindtap="artcomment" data-artid="{{artDetail.id}}">
+        <a>
+            写留言
+            <i class="fa fa-pencil" style="color:#758fc1"></i>
+        </a>
+    </view>
+    <view class="pllstdiv">
+        <view class="pldiv" wx:for="{{commentlist}}">
+            <image src="{{item.user_img}}"></image>
+            <view class="plusername">{{item.nick_name}}</view>
+            <view>{{item.post_content}}</view>
+            <view class="pltimediv">{{item.create_time}}</view>
+        </view>
+    </view>
+</view>

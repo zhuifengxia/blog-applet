@@ -1,0 +1,22 @@
+<view class="container" bind:tap="onArticle">
+    <view class="art-title">{{data.article_title}}</view>
+    <image class="art-img" src="https://liuxiaomo.cn{{data.article_img}}"></image>
+    <view class="sub-container">
+        <view class="arttimediv">
+            <i class="fa fa-thumbs-o-up"></i>
+            {{data.like_num}}
+        </view>
+        <view class="arttimediv">
+            <i class="fa fa-commenting-o"></i>
+            {{data.comment_num}}
+        </view>
+        <view class="arttimediv">
+            <i class="fa fa-eye"></i>
+            {{data.read_num}}
+        </view>
+        <view class="arttimediv">
+            <i class="fa fa-clock-o"></i>
+            {{data.create_time}}
+        </view>
+    </view>
+</view>

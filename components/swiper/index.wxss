@@ -1,0 +1,26 @@
+.container {
+    margin-top: 20rpx;
+    width: 100%;
+    background-color: white;
+}
+
+.swiper {
+    width: 94%;
+    margin: 0 auto;
+    padding: 20rpx;
+}
+
+.slide-image {
+    width: 100%;
+    border-radius: 10rpx;
+}
+
+.bannertitle {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    color: black;
+    background-color: #d2d2d2;
+    opacity: 0.3;
+}

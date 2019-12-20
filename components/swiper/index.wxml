@@ -1,0 +1,10 @@
+<view class="container">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+        <block wx:for="{{data}}" wx:key="">
+            <swiper-item>
+                <image mode='widthFix' src="{{item.article_img}}" class="slide-image" />
+                <view class="bannertitle">{{item.article_title}}</view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

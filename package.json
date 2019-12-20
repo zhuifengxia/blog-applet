@@ -1,0 +1,22 @@
+{
+  "name": "blog-applet",
+  "version": "1.0.0",
+  "description": "blog applet by liuxiaomo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuifengxia/blog-applet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhuifengxia/blog-applet/issues"
+  },
+  "homepage": "https://github.com/zhuifengxia/blog-applet#readme",
+  "dependencies": {
+    "lin-ui": "^0.6.13"
+  }
+}
