@@ -3,20 +3,20 @@
     <image class="art-img" src="https://liuxiaomo.cn{{data.article_img}}"></image>
     <view class="sub-container">
         <view class="arttimediv">
-            <i class="fa fa-thumbs-o-up"></i>
-            {{data.like_num}}
+            <l-icon name="like" color="#d2d2d2" size="35" />
+            <text class="text">{{data.like_num}}</text>
         </view>
         <view class="arttimediv">
-            <i class="fa fa-commenting-o"></i>
-            {{data.comment_num}}
+            <l-icon name="comment" color="#d2d2d2" size="35" />
+            <text class="text">{{data.comment_num}}</text>
         </view>
         <view class="arttimediv">
-            <i class="fa fa-eye"></i>
-            {{data.read_num}}
+            <l-icon name="eye" color="#d2d2d2" size="35" />
+            <text class="text">{{data.read_num}}</text>
         </view>
         <view class="arttimediv">
-            <i class="fa fa-clock-o"></i>
-            {{data.create_time}}
+            <l-icon name="time" color="#d2d2d2" size="35" />
+            <text class="text">{{data.create_time}}</text>
         </view>
     </view>
 </view>

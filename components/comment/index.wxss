@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30rpx;
+    padding-top:30rpx;
+}
+
+.container image{
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+.sub-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.nickname{
+    color: #888888;
+    font-size: 29rpx;
+    margin-bottom: 10rpx;
+}

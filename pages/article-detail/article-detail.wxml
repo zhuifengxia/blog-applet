@@ -1,46 +1,52 @@
 <view class="container">
-    <text class="title">{{artDetail.article_title}}</text>
-    <view class="articlemsg">
-        <l-tag shape="circle">{{artDetail.article_type}}</l-tag>
-        <p class="articletype"></p>
-        <p>
-            <i class='fa fa-user'></i>
-            刘小莫
-        </p>
-        <p class="articletime">
-            <i class="fa fa-clock-o"></i>
-            {{artDetail.create_time}}
-        </p>
+    <view class="header">
+        <view class="title">
+            <text>{{artDetail.article_title}}</text>
+        </view>
+        <view class="articlemsg">
+            <view class="art-tag">
+                <l-tag shape="circle" plain="{{true}}" font-color="#d2d2d2">
+                    {{artDetail.article_type}}
+                </l-tag>
+                <view class="user">
+                    <l-icon name="user" color="#d2d2d2" size="30" />
+                    <text class="author">刘小莫</text>
+                </view>
+            </view>
+            <view class="time-div">
+                <l-icon name="time" color="#d2d2d2" size="30" />
+                <text class="time">{{artDetail.create_time}}</text>
+            </view>
+        </view>
     </view>
     <view class="artmsg">
-        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        <rich-text nodes="{{artDetail.article_msg}}"></rich-text>
     </view>
     <view class="useroperdiv">
-        <p style="margin-right:12px;">阅读 {{artDetail.read_num}}</p>
-        <p data-opertype="0" data-artid="{{artDetail.id}}" bindtap="artlike">
-            <i style="color:#758fc1" class="fa {{artDetail.is_like==1?'fa-thumbs-up':'fa-thumbs-o-up'}}"></i>
-            {{artDetail.like_num}}
-        </p>
-        <p data-opertype="1" data-artid="{{artDetail.id}}" bindtap="artlike" style="float:right">
-            <i style="color:#758fc1" class="fa {{artDetail.is_collect==1?'fa-star':'fa-star-o'}}"></i>
-            收藏
-        </p>
+        <view class="read-calss">
+            <text class="readnum">阅读 {{artDetail.read_num}}</text>
+            <l-button special="{{true}}" l-class="like" bind:getuserinfo="getUserInfo" open-type="getUserInfo">
+                <l-icon name="like" size="35" />
+            </l-button>
+            <text class="time">{{artDetail.like_num}}</text>
+        </view>
+        <view class="collect" data-opertype="1" data-artid="{{artDetail.id}}" bindtap="artlike" style="float:right">
+            <l-icon name="favor" size="35" />
+            <text class="time">收藏</text>
+        </view>
     </view>
 </view>
 <view class="artpingluns">
-    <view class="pltxtmsg">精选留言({{artDetail.comment_num}})</view>
-    <view class="writepldiv" bindtap="artcomment" data-artid="{{artDetail.id}}">
-        <a>
-            写留言
-            <i class="fa fa-pencil" style="color:#758fc1"></i>
-        </a>
+    <view class="operdiv">
+        <view class="pltxtmsg">精选留言({{artDetail.comment_num}})</view>
+        <view class="writepldiv" bindtap="artcomment" data-artid="{{artDetail.id}}">
+            <text class="edit">写留言</text>
+            <l-icon name="edit" size="30" />
+        </view>
     </view>
     <view class="pllstdiv">
-        <view class="pldiv" wx:for="{{commentlist}}">
-            <image src="{{item.user_img}}"></image>
-            <view class="plusername">{{item.nick_name}}</view>
-            <view>{{item.post_content}}</view>
-            <view class="pltimediv">{{item.create_time}}</view>
-        </view>
+        <block wx:for="{{comments}}">
+            <m-comment data="{{item}}"></m-comment>
+        </block>
     </view>
 </view>

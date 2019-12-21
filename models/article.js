@@ -30,6 +30,16 @@ class ArticleModel extends HTTP {
       url: `article/detail/${artid}`
     });
   }
+
+  //文章评论信息
+  getComments(artid, page) {
+    return this.request({
+      url: `article/comments/${artid}`,
+      data: {
+        page: page
+      }
+    });
+  }
 }
 
 export { ArticleModel };

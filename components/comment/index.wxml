@@ -1,0 +1,7 @@
+<view class="container">
+    <image src="{{data.user_img}}"></image>
+    <view class="sub-container">
+        <view class="nickname">{{data.nick_name}}</view>
+        <view>{{data.post_content}}</view>
+    </view>
+</view>
