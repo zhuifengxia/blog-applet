@@ -1,4 +1,5 @@
 import { ArticleModel } from "../../models/article.js";
+import { promisic } from '../../miniprogram_npm/lin-ui/utils/utils.js'
 const articleModel = new ArticleModel();
 Page({
   /**
@@ -9,7 +10,8 @@ Page({
     comments: [],
     loading: false,
     page: 1,
-    total: null
+    total: null,
+    authorized: false
   },
 
   /**
@@ -26,6 +28,17 @@ Page({
       comments: comments.data
     });
   },
+  async userAuthorized() {
+    const data = await promisic(wx.getSetting)()
+    if (data.authSetting['scope.userInfo']) {
+      const res = await promisic(wx.getUserInfo)()
+      this.setData({
+        authorized: true,
+        userInfo: res.userInfo
+      })
+    }
+  },
+  getUserInfo(event) { },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
