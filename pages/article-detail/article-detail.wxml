@@ -27,14 +27,14 @@
             <text class="readnum">阅读 {{artDetail.read_num}}</text>
             <l-button special="{{true}}" l-class="like" bind:getuserinfo="getUserInfo" data-opertype="0" open-type="getUserInfo">
                 <i class="fa {{artDetail.is_like==1?'fa-thumbs-up':'fa-thumbs-o-up'}}" style="color:#3963bc"></i>
+                <text class="time">{{artDetail.like_num}}</text>
             </l-button>
-            <text class="time">{{artDetail.like_num}}</text>
         </view>
         <view class="collect">
             <l-button special="{{true}}" l-class="like" bind:getuserinfo="getUserInfo" data-opertype="1" open-type="getUserInfo">
                 <i class="fa {{artDetail.is_collect==1?'fa-star':'fa-star-o'}}" style="color:#3963bc"></i>
+                <text class="time">收藏</text>
             </l-button>
-            <text class="time">收藏</text>
         </view>
     </view>
 </view>

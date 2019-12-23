@@ -55,7 +55,7 @@ Page({
     const opertype = event.target.dataset.opertype;
     const like = await userModel.artLike(this.data.artDetail.id, opertype);
     const data = this.data.artDetail;
-    if (opertype) {
+    if (opertype == 1) {
       data.is_collect = like.is_like;
     } else {
       data.like_num = like.num;
