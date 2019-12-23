@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "m-data": "/components/art-data/index"
+  }
+}

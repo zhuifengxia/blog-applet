@@ -1,0 +1,11 @@
+<view class="container">
+    <view class="item-ans" bindtap='artDetail'>
+        <view class="avatar">
+            <image class="img" src="https://liuxiaomo.cn{{data.article_img}}"></image>
+        </view>
+        <view class="expertInfo">
+            <view class="name">{{data.article_title}}</view>
+            <view class="tag">{{data.create_time}}</view>
+        </view>
+    </view>
+</view>

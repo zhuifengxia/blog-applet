@@ -1,0 +1,5 @@
+<view class="container">
+    <block wx:for="{{articles}}">
+        <m-data data="{{item}}" bind:artDetail="artDetail"></m-data>
+    </block>
+</view>

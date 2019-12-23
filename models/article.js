@@ -62,6 +62,17 @@ class ArticleModel extends HTTP {
       url: "types"
     });
   }
+
+  //获取我的信息
+  getMyData(opertype, page) {
+    return this.request({
+      url: `mydata/${opertype}`,
+      data: {
+        page: page,
+        sign: wx.getStorageSync("sign")
+      }
+    });
+  }
 }
 
 export { ArticleModel };

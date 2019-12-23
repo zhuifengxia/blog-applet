@@ -5,7 +5,8 @@
     "pages/my/my",
     "pages/article-detail/article-detail",
     "pages/write-comment/write-comment",
-    "pages/type-article/type-article"
+    "pages/type-article/type-article",
+    "pages/my-data/my-data"
   ],
   "window": {
     "navigationBarTitleText": "一米阳光",

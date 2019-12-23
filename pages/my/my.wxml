@@ -1,2 +1,20 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="container">
+    <view class="userdiv">
+        <l-button wx:if="{{!authorized}}" special="{{true}}" bind:getuserinfo="onGetUserInfo" open-type="getUserInfo">
+            <image class="avatar" src="/images/my/my.png" />
+        </l-button>
+        <view wx:if="{{authorized}}">
+            <l-avatar text="{{userInfo.nickName}}" l-text-class="nickname" placement="bottom" src="{{userInfo.avatarUrl}}" />
+        </view>
+    </view>
+    <view class="list-container">
+        <l-list title="我的收藏" icon="favor" tagShape="circle" data-opertype="1" bind:lintap="myData" />
+        <l-list title="我的赞" icon="like" tagShape="circle" data-opertype="0" bind:lintap="myData" />
+        <l-list title="我的留言" icon="comment" tagShape="circle" data-opertype="2" bind:lintap="myData" />
+    </view>
+    <view class="list-container">
+        <l-list title="帮助与反馈" icon="help" tagShape="circle" />
+        <l-list title="关于我" icon="warning" tagShape="circle" />
+        <l-list title="客服中心" icon="customer-service" desc="在线时间：18:00-22:00" />
+    </view>
+</view>
