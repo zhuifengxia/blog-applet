@@ -25,13 +25,15 @@
     <view class="useroperdiv">
         <view class="read-calss">
             <text class="readnum">阅读 {{artDetail.read_num}}</text>
-            <l-button special="{{true}}" l-class="like" bind:getuserinfo="getUserInfo" open-type="getUserInfo">
-                <l-icon name="like" size="35" />
+            <l-button special="{{true}}" l-class="like" bind:getuserinfo="getUserInfo" data-opertype="0" open-type="getUserInfo">
+                <i class="fa {{artDetail.is_like==1?'fa-thumbs-up':'fa-thumbs-o-up'}}" style="color:#3963bc"></i>
             </l-button>
             <text class="time">{{artDetail.like_num}}</text>
         </view>
-        <view class="collect" data-opertype="1" data-artid="{{artDetail.id}}" bindtap="artlike" style="float:right">
-            <l-icon name="favor" size="35" />
+        <view class="collect">
+            <l-button special="{{true}}" l-class="like" bind:getuserinfo="getUserInfo" data-opertype="1" open-type="getUserInfo">
+                <i class="fa {{artDetail.is_collect==1?'fa-star':'fa-star-o'}}" style="color:#3963bc"></i>
+            </l-button>
             <text class="time">收藏</text>
         </view>
     </view>
@@ -39,7 +41,7 @@
 <view class="artpingluns">
     <view class="operdiv">
         <view class="pltxtmsg">精选留言({{artDetail.comment_num}})</view>
-        <view class="writepldiv" bindtap="artcomment" data-artid="{{artDetail.id}}">
+        <view class="writepldiv" bind:tap="artcomment" data-artid="{{artDetail.id}}">
             <text class="edit">写留言</text>
             <l-icon name="edit" size="30" />
         </view>

@@ -1,0 +1,3 @@
+<view class='artmsg'>{{arttitle}}</view>
+<textarea name="writemsg" class="writemsg" placeholder-class="writepla" placeholder="留下你对这篇文章的看法吧~" bindinput="contentInput"></textarea>
+<button bindtap="submitcomment" class="btn" type="primary" size="default">提交</button>

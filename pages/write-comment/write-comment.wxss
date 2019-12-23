@@ -1,0 +1,23 @@
+.artmsg {
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+.writemsg {
+    background-color: white;
+    margin: 0 auto;
+    width: 100%;
+    border-top: 1px solid #f0f0f2;
+    border-bottom: 1px solid #f0f0f2;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.btn {
+    width: 85%;
+    margin-top: 20px;
+}
+
+.writepla {
+    font-size: 15px;
+}

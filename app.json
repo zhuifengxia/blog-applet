@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/category/category",
     "pages/my/my",
-    "pages/article-detail/article-detail"
+    "pages/article-detail/article-detail",
+    "pages/write-comment/write-comment"
   ],
   "window": {
     "navigationBarTitleText": "一米阳光",

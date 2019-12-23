@@ -27,7 +27,10 @@ class ArticleModel extends HTTP {
   //获取文章详情
   getArtDetail(artid) {
     return this.request({
-      url: `article/detail/${artid}`
+      url: `article/detail/${artid}`,
+      data: {
+        sign: wx.getStorageSync("sign")
+      }
     });
   }
 
@@ -38,6 +41,18 @@ class ArticleModel extends HTTP {
       data: {
         page: page
       }
+    });
+  }
+  //评论文章
+  artComment(artid, content) {
+    return this.request({
+      url: "submitComment",
+      data: {
+        artid: artid,
+        content: content,
+        sign: wx.getStorageSync("sign")
+      },
+      method: "POST"
     });
   }
 }
