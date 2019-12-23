@@ -1,0 +1,4 @@
+<view class="container" bind:tap="onType">
+    <text class="typename">{{data.type_name}}</text>
+    <text class="typemsg">{{data.type_msg}}</text>
+</view>

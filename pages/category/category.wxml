@@ -1,2 +1,5 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class="container">
+    <block wx:for="{{types}}" wx:key="">
+        <m-type data="{{item}}" bind:type="onType"></m-type>
+    </block>
+</view>

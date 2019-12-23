@@ -55,6 +55,13 @@ class ArticleModel extends HTTP {
       method: "POST"
     });
   }
+
+  //获取文章分类
+  getType() {
+    return this.request({
+      url: "types"
+    });
+  }
 }
 
 export { ArticleModel };

@@ -1,0 +1,17 @@
+.container {
+    background-color: white;
+    margin: 20rpx;
+    padding: 10rpx;
+    border-radius: 5px
+}
+
+.typename {
+    display: block;
+    margin-top: 5px;
+
+}
+
+.typemsg {
+    color: #d2d2d2;
+    font-size: 12px
+}

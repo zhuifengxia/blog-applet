@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "m-type": "/components/type/index"
+  }
 }
