@@ -1,5 +1,5 @@
 const config = {
-  api_base_url: "https://liuxiaomo.cn/api/v2/"
+  api_base_url: "https://liuxiaomo.cn/wechat/api"
 };
 
 export { config };
