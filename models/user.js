@@ -35,6 +35,16 @@ class UserModel extends HTTP {
       }
     });
   }
+  //发送模板消息
+  sendMsg() {
+    return this.request({
+      url: "send",
+      method: "POST",
+      data: {
+        sign: this.getStorageSync("sign")
+      }
+    });
+  }
 
   setStorageSync(key, value) {
     //同步写入缓存，还有异步写入缓存

@@ -13,7 +13,7 @@
         <l-list title="我的留言" icon="comment" tagShape="circle" data-opertype="2" bind:lintap="myData" />
     </view>
     <view class="list-container">
-        <l-list title="帮助与反馈" icon="help" tagShape="circle" />
+        <l-list title="帮助与反馈" icon="help" tagShape="circle" bind:tap="msgTest" />
         <l-list title="关于我" icon="warning" tagShape="circle" />
         <l-list title="客服中心" icon="customer-service" desc="在线时间：18:00-22:00" />
     </view>
